@@ -10,8 +10,8 @@ Rails.application.routes.draw do
 
   # Admin area
   namespace :admin do
-    root "posts#index"
-    resources :posts
+    root "dashboard#index"
+    resources :posts, :users
   end
 
   # Health check
