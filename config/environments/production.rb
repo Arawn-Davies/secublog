@@ -16,7 +16,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = true
 
   # Cache assets for far-future expiry since they are all digest stamped.
-  config.public_file_server.headers = ZapTest::Application::STATIC_SECURITY_HEADERS.merge(
+  config.public_file_server.headers = Secublog::Application::STATIC_SECURITY_HEADERS.merge(
     "cache-control" => "public, max-age=#{1.year.to_i}"
   )
 

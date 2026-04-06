@@ -16,7 +16,7 @@ Rails.application.configure do
   config.eager_load = ENV["CI"].present?
 
   # Configure public file server for tests with cache-control for performance.
-  config.public_file_server.headers = ZapTest::Application::STATIC_SECURITY_HEADERS.merge(
+  config.public_file_server.headers = Secublog::Application::STATIC_SECURITY_HEADERS.merge(
     "cache-control" => "public, max-age=3600"
   )
 
